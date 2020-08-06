@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <title>Welcome to my Really Simple and Minimal Sudoku Solver !!</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: rgb(11, 212, 212)"> Sudoku Solver !!</h1>
+    <div>
+        <div style="text-align: center;">
+            <p>As you can see below, a standart Sudoku puzzle looks like the following !!</p>
+            <div>
+                <img src="./DiagramsAndNotations-Givens.png" alt="A Sudoku Puzzle">
+            </div>
+            <p>It translates to the following string, if we take the values row wise , scanning each column, taking '0'
+                for each empty box </p>
+            <p style="font-weight:bold;">
+                310004069&nbsp&nbsp000000200&nbsp&nbsp008005040&nbsp&nbsp000000005&nbsp&nbsp006000017&nbsp&nbsp807030000&nbsp&nbsp590700006&nbsp&nbsp600003050&nbsp&nbsp000100002
+            </p>
+            <p>Now we'll just add them together to make a single string and </br> <b>Input</b> into the <b>solver
+                    box</b> below and <b>press submit button</b> to get the solution back </p>
+        </div> <!-- All the page title and instruction and Image will be here -->
+        <div style="text-align: center;">
+            <form action="/string" method="GET">
+                <label for="string" style="color: rgb(75, 38, 38);"><b>Enter the String :</b></label>
+                <input type="text" id="string" size="60" value="310004069000000200008005040000000005006000017807030000590700006600003050000100002"></br></br>
+                <input id="button" type="submit" value="Submit" style="font-weight: bold;">
+            </form>
+        </div> <!-- This will contain the form / input and button -->
+    </br>
+        <div id=solved style="font-weight:bold; text-align: center;width: 400px;height: 500px;margin:auto;background-color: cadetblue"></div>
+       <!-- <div style="text-align: center;">
+            <div id='unsolved' style="width: 400px;height: 400px; margin:10px;background-color: cadetblue;">
+                <p>3 1 0 0 0 4 0 6 9 </br></br>0 0 0 0 0 0 2 0 0 `</p>
+            </div> <!-- This will house the diagram the before button -->
+        <!-- <div id='solved' style="width: 400px; height:400px;float:left;margin: 10px;background-color: coral;"> --> 
+            <!-- </div> This will house the ascii art the after diagram and the solution string -->
+        <!-- </div> --> 
+    </div>
+    <script src='./process.js'></script>
+</body>
+
+</html>
